@@ -86,7 +86,7 @@ function renderMain(container, state) {
     const dueDate = document.createElement("div");
     if (todo.dueDate) {
       const date = new Date(todo.dueDate);
-      const formatted = date.toLocaleDateString("en-US", {
+      const formatted = date.toLocaleDateString("en-GB", {
         month: "short",
         day: "numeric",
       });
