@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+    <h1 id="header">Todo list</h1>
+    <div id="app">
+    </div>
+    <button id="add-task-btn">+ Add Task</button>
+
+    <div id="modal-overlay" class="hidden">
+        <div class="modal">
+            <h2>Add Task</h2>
+            <form id="task-form">
+                <label>
+                    Title
+                    <input type="text" name="title" required autofocus>
+                </label>
+
+                <label>Description
+                    <textarea type="text" name="description"></textarea>
+                </label>
+
+                <label>
+                    Priority
+                    <select name="priority" id="">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </label>
+
+                <label>
+                    Due Date
+                    <input type="date" name="dueDate" id="due-date">
+                </label>
+
+                <div class="modal-actions">
+                    <button type="button" id="cancel-btn">Cancel</button>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <button id="add-project-btn">+ Add Project</button>
+    <div id="add-project-popup" class="hidden">
+        <form id="project-form">
+            <input type="text" placeholder="Project name" name="name" id="project-name">
+            <div class="project-buttons">
+                <button type="button" id="project-cancel-btn">Cancel</button>
+                <button type="button" id="project-submit-btn">Add</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
