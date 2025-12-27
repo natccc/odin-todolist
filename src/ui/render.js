@@ -84,7 +84,14 @@ function renderMain(container, state) {
     title.textContent = todo.title;
 
     const dueDate = document.createElement("div");
-    dueDate.textContent = todo.dueDate;
+    if (todo.dueDate) {
+      const date = new Date(todo.dueDate);
+      const formatted = date.toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+      });
+      dueDate.textContent = formatted;
+    }
     dueDate.className = "todo-dueDate";
 
     const buttons = document.createElement("div");
